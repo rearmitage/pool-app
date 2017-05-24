@@ -41,7 +41,7 @@ app.use(bodyParser.json());
 
 app.use('/', express.static('/../client/build'))
 
-app.get('/', (req, res) => {
+app.get('/test', (req, res) => {
     res.sendFile('/../client/build/index.html');
 });
 
