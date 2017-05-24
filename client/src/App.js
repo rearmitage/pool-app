@@ -60,7 +60,7 @@ class App extends Component {
   }
 
   chooseWinner(winner) {
-    axios.put(`//localhost:8080/player/${winner._id}`, winner)
+    axios.put(`/player/${winner._id}`, winner)
       .then(res => {
         let players = this.state.players.filter(a => a._id !== res.data._id);
         players.push(res.data);
