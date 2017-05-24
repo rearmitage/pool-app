@@ -43,11 +43,11 @@ app.use(bodyParser.json());
 //=====================================================================
 // Serving Static files and base html page
 //=====================================================================
-
-app.use(express.static('/build'))
+app.use(express.static(__dirname + '/build'));
+// app.use(express.static('/build'))
 
 app.get('/test', (req, res) => {
-    res.sendFile('/build/index.html');
+    res.sendFile(__dirname + '/build/index.html');
 });
 
 //=====================================================================
