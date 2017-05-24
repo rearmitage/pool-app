@@ -1,0 +1,28 @@
+body {
+    background-image: url("https://images-na.ssl-images-amazon.com/images/I/81IWeBMgK9L._SY355_.jpg");
+    background-repeat: repeat;
+}
+
+.match {
+  text-align: center;
+}
+
+.leaderboard {
+  margin-bottom: 20px;
+}
+
+.PlayerForm {
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.main {
+  padding-top: 20px;
+}
+
+.sup {
+  position: relative;
+  bottom: 1ex;
+  font-size: 80%;
+}
+
