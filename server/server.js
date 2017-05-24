@@ -2,6 +2,8 @@
 // Server.js entry point
 //=====================================================================
 
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
@@ -12,16 +14,16 @@ const http = require('http');
 const _ = require('lodash');
 const Schema = require('mongoose').Schema;
 const validator = require('validator');
-const port = process.env.PORT || 8080;
 const cors = require('cors')
 const helmet = require('helmet');
 const sanitize = require('sanitize-html');
+const port = process.env.PORT || 8080;
 
 //=====================================================================
 // Connecting to database
 //=====================================================================
 
-mongoose.connect('mongodb://localhost:27017/PoolGame');
+mongoose.connect(process.env.MONGODB_URI);
 
 //=====================================================================
 // Setting up middleware
