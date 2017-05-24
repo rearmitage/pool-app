@@ -9,7 +9,8 @@
   "author": "Richard Armitage",
   "license": "MIT",
   "engines": {
-    "node": "6.9.2"
+    "node": "6.9.2",
+    "npm": "4.2.0"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
