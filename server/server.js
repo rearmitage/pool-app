@@ -39,10 +39,10 @@ app.use(bodyParser.json());
 // Serving Static files and base html page
 //=====================================================================
 
-app.use('/', express.static(path.join(__dirname, '/../client/build')))
+app.use('/', express.static('/../client/build'))
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/../client/build/index.html'));
+    res.sendFile('/../client/build/index.html');
 });
 
 //=====================================================================
@@ -71,7 +71,6 @@ let Player = mongoose.model('Player', PlayerSchema);
 //=====================================================================
 
 app.get('/player', (req, res, next) => {
-  console.log('why')
   Player.find().then((players) => {
     res.send(players);
   })
@@ -115,7 +114,7 @@ app.use(function(err, req, res, next) {
   if (err.status !== 404) {
     return next(err);
   }
-  console.log(err);
+  console.log(err.message);
   res.status(404).send(err.message || 'Endpoint does not exist');
 });
 
@@ -127,7 +126,7 @@ app.use(function(err, req, res, next) {
   } else {
     err.status = err.status || 500;
   }
-  console.log(err);
+  console.log(err.message);
   res.status(err.status).send(err.message || 'Internal Server Error');
 });
 
