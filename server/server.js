@@ -44,10 +44,10 @@ app.use(bodyParser.json());
 // Serving Static files and base html page
 //=====================================================================
 
-app.use('/', express.static(process.env.PWD + '/../client/build'))
+app.use(express.static('/build'))
 
 app.get('/test', (req, res) => {
-    res.sendFile(process.env.PWD + '/../client/build/index.html');
+    res.sendFile('/build/index.html');
 });
 
 //=====================================================================
