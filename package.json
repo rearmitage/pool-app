@@ -1,0 +1,11 @@
+{
+  "name": "pool-app",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "scripts" : {
+    "start" : "node server/server.js"
+  },
+  "repository": "https://github.com/rearmitage/pool-app",
+  "author": "Richard Armitage",
+  "license": "MIT"
+}
