@@ -20,6 +20,11 @@ const sanitize = require('sanitize-html');
 const port = process.env.PORT || 8080;
 
 //=====================================================================
+// For Static file on heroku
+//=====================================================================
+process.env.PWD = process.cwd();
+
+//=====================================================================
 // Connecting to database
 //=====================================================================
 
@@ -39,10 +44,10 @@ app.use(bodyParser.json());
 // Serving Static files and base html page
 //=====================================================================
 
-app.use('/', express.static('/../client/build'))
+app.use('/', express.static(process.env.PWD + '/../client/build'))
 
 app.get('/test', (req, res) => {
-    res.sendFile('/../client/build/index.html');
+    res.sendFile(process.env.PWD + '/../client/build/index.html');
 });
 
 //=====================================================================
