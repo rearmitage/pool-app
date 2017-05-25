@@ -96,26 +96,21 @@ class App extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-12">
-            <div className="row">
-              <div className="main col-md-4 col-md-offset-4">
-                <div className="panel panel-default">
-                  <div className="panel-body">
-                    <h2 style={{"textAlign": "center"}}>O<span className="sup">3</span> Plays Pool</h2>
-                    {this.state.base ? <LeaderBoard setup={this.setup} players={this.state.players} /> : null}
-                    {this.state.setup ?  <PlayerSelect startGame={this.startGame} players={this.state.players} onPlayerAdd={this.onPlayerAdd} reset={this.reset}/> : null }
-                    {
-                      this.state.match.inProgress ?  <Match
-                        player1={this.state.match.player1}
-                        player2={this.state.match.player2}
-                        chooseWinner={this.chooseWinner}
-                        reset={this.reset}
-                    /> : null }
-                  </div>
-                </div>
+          <div className="main col-sm-8 col-sm-offset-2 col-lg-4 col-lg-offset-4">
+            <div className="panel panel-default">
+              <div className="panel-body">
+                <h2 style={{"textAlign": "center"}}>O<span className="sup">3</span> Plays Pool</h2>
+                {this.state.base ? <LeaderBoard setup={this.setup} players={this.state.players} /> : null}
+                {this.state.setup ?  <PlayerSelect startGame={this.startGame} players={this.state.players} onPlayerAdd={this.onPlayerAdd} reset={this.reset}/> : null }
+                {
+                  this.state.match.inProgress ?  <Match
+                    player1={this.state.match.player1}
+                    player2={this.state.match.player2}
+                    chooseWinner={this.chooseWinner}
+                    reset={this.reset}
+                /> : null }
               </div>
             </div>
-
           </div>
         </div>
       </div>
