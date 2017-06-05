@@ -20,9 +20,8 @@ body {
   padding-top: 20px;
 }
 
-.sup {
+.three {
   position: relative;
-  bottom: 1ex;
-  font-size: 80%;
+  font-size: 60%;
 }
 

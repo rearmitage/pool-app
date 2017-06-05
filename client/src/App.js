@@ -99,7 +99,7 @@ class App extends Component {
           <div className="main col-sm-8 col-sm-offset-2 col-lg-4 col-lg-offset-4">
             <div className="panel panel-default">
               <div className="panel-body">
-                <h2 style={{"textAlign": "center"}}>O<span className="sup">3</span> Plays Pool</h2>
+                <h2 style={{"textAlign": "center"}}>O<span className="three">3</span> Plays Pool</h2>
                 {this.state.base ? <LeaderBoard setup={this.setup} players={this.state.players} /> : null}
                 {this.state.setup ?  <PlayerSelect startGame={this.startGame} players={this.state.players} onPlayerAdd={this.onPlayerAdd} reset={this.reset}/> : null }
                 {
